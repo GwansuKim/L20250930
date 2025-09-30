@@ -6,22 +6,24 @@ int main()
 {
 	cout << "숫자의 갯수를 입력해 주세요 : ";
 
-	int CountOfNumber = 0;
+	long long CountOfNumber = 0LL;
 	cin >> CountOfNumber;
 
-	int Result;
-	for (int i = 0; i < CountOfNumber; i++)
+	long long Result = 0LL;
+	for (long long i = 0LL; i < CountOfNumber; i++)
 	{
-		int InputNumber = 0;
+		long long InputNumber = 0LL;
 		cin >> InputNumber;
 
-		int POT = 1;
-		while (POT < InputNumber)
+		long long POT = 1LL;
+		int Count = 0;
+		while (POT < InputNumber && Count < 18)
 		{
-			POT *= 2;
+			POT *= 2LL;
+			Count++;
 		}
 
-		if (i == 0)
+		if (i == 0LL)
 		{
 			Result = POT;
 		}
